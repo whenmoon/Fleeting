@@ -132,6 +132,7 @@ import { start, setSrcObject, setSrcObjectRemote } from '../services/CallService
 
 function CallPaneCaller(props) {
 
+  console.log(props)
   // const [view, setView] = useState(false);
 
   console.log("SENDER")

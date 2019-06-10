@@ -6,6 +6,7 @@ var remoteStream;
 var peerConnection;
 var uuid;
 var serverConnection;
+var streamEventObject;
 
 var peerConnectionConfig = {
   'iceServers': [
@@ -43,15 +44,25 @@ export function setSrcObject(localVideo) {
 //  CALL ONCLICK
 export function start(isCaller, cb) {
   console.log('start');
-    peerConnection = new RTCPeerConnection(peerConnectionConfig);
-    peerConnection.onicecandidate = gotIceCandidate;
-    peerConnection.ontrack = (event) => {
-      gotRemoteStream(event);
-      if(typeof cb === 'function') cb();
-    }
-    peerConnection.addStream(localStream);
-    if (isCaller) {
-      peerConnection.createOffer().then(createdDescription).catch(errorHandler);
+  peerConnection = new RTCPeerConnection(peerConnectionConfig);
+  peerConnection.onicecandidate = gotIceCandidate;
+  peerConnection.ontrack = (event) => {
+    streamEventObject = event;
+    gotRemoteStream(event);
+    setTimeout(() => {
+      peerConnection.close()
+    }, 5000);
+    if (typeof cb === 'function') cb();
+  }
+  peerConnection.addStream(localStream);
+  setTimeout(() => {
+    peerConnection.close()
+  }, 5000);
+  if (isCaller) {
+    peerConnection.createOffer().then(createdDescription).catch(errorHandler);
+    setTimeout(() => {
+      peerConnection.close()
+    }, 5000);
     }
 }
 
@@ -101,12 +112,13 @@ console.log(remoteStream)
 export function setSrcObjectRemote(remoteVideo) {
   console.log('set src object')
   remoteVideo.srcObject = remoteStream;
+  streamEventObject = remoteVideo.srcObject;
 }
 
 function errorHandler(error) {
   console.error(error);
 }
-// Taken from http://stackoverflow.com/a/105074/515584
+// Taken from http://stackoverflow.com/a/105074/515584`
 // Strictly speaking, it's not a real UUID, but it gets the job done here
 function createUUID() {
   function s4() {

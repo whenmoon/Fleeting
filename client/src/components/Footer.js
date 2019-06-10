@@ -4,9 +4,7 @@ import AddToContacts from '../components/AddToContacts'
 
 function Footer() {
   return (
-    <div>
-      <AddToContacts />
-    </div>
+    <AddToContacts />
   );
 }
 

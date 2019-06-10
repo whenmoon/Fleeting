@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useState, useContext } from 'react';
 import { CallerContext } from '../containers/Home';
-
+// import { removeTrack } from '../services/CallService'
 
 function Countdown(props) {
 
@@ -22,7 +22,10 @@ function Countdown(props) {
   }, [])
 
   if (!props.callee) {
-    if (time === 0) callHasExpired(true)
+    if (time === 0) {
+      callHasExpired(true)
+      // removeTrack()
+    }
   }
 
   return (
