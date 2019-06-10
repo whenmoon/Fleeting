@@ -1,0 +1,40 @@
+{
+  "name": "fleeting",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@craco/craco": "^5.2.1",
+    "antd": "^3.19.2",
+    "craco-antd": "^1.11.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-fade-in": "^0.1.6",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1",
+    "socket.io": "^2.2.0"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "babel-plugin-import": "^1.12.0"
+  }
+}
