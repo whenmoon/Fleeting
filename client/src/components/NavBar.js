@@ -1,10 +1,14 @@
 import React from 'react';
 import './NavBar.less';
+import { Icon } from 'antd';
 
 function NavBar() {
   return (
-    <div>
+    <div className="Nav">
+      <div className="title">
       Fleeting
+      <Icon type="search" />
+      </div>
     </div>
   );
 }

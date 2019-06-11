@@ -1,0 +1,38 @@
+.DB {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+  height: 40px;
+}
+
+.name {
+margin-right: 20px;
+}
+
+.calldata {
+  /* align-self: flex-end */
+}
+
+.phone {
+  
+}
+
+.star {
+  
+}
+
+.delete {
+
+}
+
+.line2 {
+  /* margin-top: 0px; */
+/* align: right; */
+}
+
+/* .circle {
+  margin-top: 10px;
+  align-self: flex-start;
+} */

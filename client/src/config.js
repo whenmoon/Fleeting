@@ -1,4 +1,4 @@
-const SOCKET_SERVER_BASE_URL = 'http://localhost:4001'
+const SOCKET_SERVER_BASE_URL = 'http://192.168.1.201:4001'
 
 export {
   SOCKET_SERVER_BASE_URL,

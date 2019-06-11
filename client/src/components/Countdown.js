@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useState, useContext } from 'react';
 import { CallerContext } from '../containers/Home';
-// import { removeTrack } from '../services/CallService'
+import './Countdown.less'
 
 function Countdown(props) {
 
@@ -24,15 +24,22 @@ function Countdown(props) {
   if (!props.callee) {
     if (time === 0) {
       callHasExpired(true)
-      // removeTrack()
     }
   }
 
+  if (time > 5000) {
   return (
-    <div>
+    <div className="time">
       {new Date(time).toISOString().slice(11, -5)}
     </div>
   )
+  } else {
+    return (
+      <div className="timeShort">
+      {new Date(time).toISOString().slice(11, -5)}
+    </div>
+    )
+  }
 }
 
 export default Countdown;

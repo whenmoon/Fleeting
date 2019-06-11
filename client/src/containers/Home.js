@@ -7,6 +7,7 @@ import InputTime from '../components/InputTime';
 import CallPaneReceiver from '../components/CallPaneReceiver';
 import { listenForIncomingCall } from '../services/WebSocketService'
 import CallExpired from '../components/CallExpired'
+import AddToContacts from '../components/AddToContacts'
 
 export const RenderContext = React.createContext(null);
 export const CallerContext = React.createContext(null);
@@ -27,9 +28,9 @@ function Home() {
 
   listenForIncomingCall(setIncomingCallFlag)
 
-  // const addAContact = (flag) => {
-  //   setCreateContact(flag)
-  // }
+  const addAContact = (flag) => {
+    setCreateContact(flag)
+  }
 
   const selectContactToCall = (contact) => {
     setSelectContact(contact)
@@ -39,7 +40,7 @@ function Home() {
   const callHasExpired = (flag) => {
     setCallExpired(flag)
   }
-  
+
   if (callExpired) {
     console.log('yo')
     return (
@@ -51,7 +52,7 @@ function Home() {
     return (
       <div>
         <CallerContext.Provider >
-          <CallPaneReceiver value={{ incomingTimeData }}/>
+          <CallPaneReceiver value={{ incomingTimeData, callHasExpired }} />
         </CallerContext.Provider>
       </div>
     )
@@ -66,12 +67,16 @@ function Home() {
   } if (!createContact) {
     return (
       <div>
-        <RenderContext.Provider value={{ selectContactToCall }}>
-          <span>Contacts:</span>
+        <RenderContext.Provider value={{ selectContactToCall, addAContact }}>
+          <div className="addContactButton">
+            Contacts
+          </div>
           <br />
-          <br /> 
           <br />
           <DB />
+          <br />
+          {/* <br /> */}
+          <AddToContacts />
         </RenderContext.Provider>
       </div>
     );

@@ -1,6 +1,8 @@
 
+// var localVideo;
 var localStream;
 var remoteStream;
+// var remoteVideo;
 var peerConnection;
 var uuid;
 var serverConnection;
@@ -20,6 +22,10 @@ serverConnection.onmessage = gotMessageFromServer;
 serverConnection.onerror = function(event) {
   console.error("WebSocket error observed:", event);
 };
+
+serverConnection.onclose = function(event) {
+   console.log("Error occurred.");
+}
 
 var constraints = {
   video: true,

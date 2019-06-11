@@ -7,13 +7,12 @@ import FadeIn from 'react-fade-in';
 
 function AddToContacts() {
 
-  // const { addAContact } = useContext(RenderContext)
+  const { addAContact } = useContext(RenderContext)
 
   const handleOnClick = event => {
     event.preventDefault();
-    // addAContact(true)
+    addAContact(true)
   }
-
 
   return (
     <div className="AddToContacts">

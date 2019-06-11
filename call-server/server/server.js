@@ -1,3 +1,6 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-console */
+
 const HTTPS_PORT = 8444;
 
 const fs = require('fs');
@@ -12,23 +15,7 @@ const serverConfig = {
   cert: fs.readFileSync('cert.pem'),
 };
 
-// ----------------------------------------------------------------------------------------
-
-// Create a server for the client html page
-const handleRequest = function(request, response) {
-  // Render the single client html file for any request the HTTP server receives
-  console.log('request received: ' + request.url);
-
-  if(request.url === '/') {
-    response.writeHead(200, {'Content-Type': 'text/html'});
-    response.end(fs.readFileSync('client/index.html'));
-  } else if(request.url === '/webrtc.js') {
-    response.writeHead(200, {'Content-Type': 'application/javascript'});
-    response.end(fs.readFileSync('client/webrtc.js'));
-  }
-};
-
-const httpsServer = http.createServer(serverConfig, handleRequest);
+const httpsServer = http.createServer(serverConfig);
 httpsServer.listen(HTTPS_PORT, '0.0.0.0');
 
 // ----------------------------------------------------------------------------------------
@@ -45,16 +32,18 @@ wss.on('connection', function(ws) {
     wss.broadcast(message);
     // console.log('----------------------------------------------')
   });
+
+  ws.on('error', function(error) {
+    console.error(error);
+  })
 });
 
 wss.broadcast = function(data) {
-  // setTimeout(() => {
     this.clients.forEach(function(client) {
       if(client.readyState === WebSocket.OPEN) {
         client.send(data);
       }
     });
-  // }, 2000);
 };
 
 console.log('Server running. Visit https://localhost:' + HTTPS_PORT + ' in Firefox/Chrome.\n\n\

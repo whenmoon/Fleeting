@@ -25,6 +25,7 @@ function InputTime() {
     return (
       <FadeIn>
         <div className="TimePicker">
+        <span>Select Call Length</span>
           <TimePicker onChange={handleOnChange} defaultOpenValue={moment('00:00:00', 'HH:mm:ss')} size="large" />
           <div>
             <Button onClick={handleOnSubmit} size="large">Done</Button>

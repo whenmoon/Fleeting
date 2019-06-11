@@ -13,6 +13,7 @@ const io = socketIo(server);
 
 //Setting up a socket with the namespace "connection" for new sockets
 io.on("connection", socket => {
+    console.log('hi')
     console.log("New client connected");
 
     //Here we listen on a new namespace called "incoming data"
