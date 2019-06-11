@@ -1,5 +1,7 @@
-const SOCKET_SERVER_BASE_URL = 'http://192.168.1.201:4001'
+const SOCKET_SERVER_BASE_URL = 'https://fleeting-sock-server-mvp110619.herokuapp.com/'
+const CALL_SERVER_BASE_URL = 'wss://fleeting-call-server-mvp110619.herokuapp.com/'
 
 export {
   SOCKET_SERVER_BASE_URL,
+  CALL_SERVER_BASE_URL,
 }

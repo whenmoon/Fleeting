@@ -1,3 +1,6 @@
+import {
+  CALL_SERVER_BASE_URL
+} from '../config';
 
 var localStream;
 var remoteStream;
@@ -13,7 +16,7 @@ var peerConnectionConfig = {
 
 uuid = createUUID();
 
-serverConnection = new WebSocket('ws://192.168.1.201:8444');
+serverConnection = new WebSocket(CALL_SERVER_BASE_URL);
 serverConnection.onmessage = gotMessageFromServer;
 
 serverConnection.onerror = function(event) {

@@ -7,8 +7,8 @@ function NavBar() {
     <div className="Nav">
       <div className="title">
       Fleeting
-      <Icon type="search" />
       </div>
+      <Icon type="search" />
     </div>
   );
 }

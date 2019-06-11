@@ -21,9 +21,11 @@ function CallPaneCaller(props) {
     if (!view) {
       return (
         <>
+        <div claaName="ready">
         {/* LOCAL VIDEO */}
           {/* <video autoPlay muted style={{ width: '40%' }} ref={localVideo => setSrcObject(localVideo)} /> */};
           <Button onClick={handleOnClick} size="large">Start Call</Button>
+        </div>
         </>
       );
     } else {

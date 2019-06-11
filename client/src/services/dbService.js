@@ -52,16 +52,16 @@ function DB() {
       avatar: femaleAvatar,
       lastCallLength: 'Last call - 02:30'
     },
-    {
-      contact: 'James',
-      avatar: maleAvatar,
-      lastCallLength: 'Last call - 04:00'
-    },
-    {
-      contact: 'Dad',
-      avatar: maleAvatar,
-      lastCallLength: 'Last call - 60:00'
-    }
+    // {
+    //   contact: 'James',
+    //   avatar: maleAvatar,
+    //   lastCallLength: 'Last call - 04:00'
+    // },
+    // {
+    //   contact: 'Dad',
+    //   avatar: maleAvatar,
+    //   lastCallLength: 'Last call - 60:00'
+    // }
   ]
 
   return (

@@ -69,13 +69,17 @@ function Home() {
       <div>
         <RenderContext.Provider value={{ selectContactToCall, addAContact }}>
           <div className="addContactButton">
+          <div className="contacts">
             Contacts
           </div>
-          <br />
+          </div>
+          {/* <br /> */}
           <br />
           <DB />
           <br />
+          <div className="contactsButton">
           <AddToContacts />
+          </div>
         </RenderContext.Provider>
       </div>
     );
