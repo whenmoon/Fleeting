@@ -18,26 +18,31 @@ function CallPaneCaller(props) {
     setView(true)
   }
 
-    if (!view) {
-      return (
-        <>
-        <div claaName="ready">
+  if (!view) {
+    return (
+      <>
+        <div className="ready">
+          <div>
+            Ready?!
         {/* LOCAL VIDEO */}
-          {/* <video autoPlay muted style={{ width: '40%' }} ref={localVideo => setSrcObject(localVideo)} /> */};
-          <Button onClick={handleOnClick} size="large">Start Call</Button>
+            {/* <video autoPlay muted style={{ width: '40%' }} ref={localVideo => setSrcObject(localVideo)} /> */}
+            <Button onClick={handleOnClick} size="large">Start Call</Button>
+          </div>
         </div>
-        </>
-      );
-    } else {
-      return (
-        <>
-        {/* REMOTE VIDEO */}
-        <video autoPlay style={{ width: '100%' }} ref={remoteVideo} />
-        <Countdown timeData={props} />
-        </>
-      )
-    }
+      </>
+    );
+  } else {
+    return (
+      <>
+        <div className="video">
+          {/* REMOTE VIDEO */}
+          <video autoPlay style={{ width: '100%' }} ref={remoteVideo} />
+          <Countdown timeData={props} />
+        </div>
+      </>
+    )
   }
+}
 
 
 

@@ -78,10 +78,10 @@ function DB() {
               <div className="line">
                 <img src={contact.avatar} alt="Avatar" style={{ width: 50, height: 50, borderRadius: 20 }} />
               </div>
-              <span onClick={handleOnClick} className="name">{contact.contact}</span >
+              <span className="name">{contact.contact}</span >
               <span className="calldata">{contact.lastCallLength}</span>
-              <Icon type="phone" theme="twoTone" className="phone" style={{ fontSize: '22px' }} />
-              <Icon type="star" theme="twoTone" className="star" style={{ fontSize: '22px' }} />
+              <Icon onClick={handleOnClick} type="phone"  className="phone" style={{ fontSize: '22px' }} />
+              <Icon type="star"  className="star" style={{ fontSize: '22px' }} />
               {/* <Icon type="delete" theme="twoTone" className="delete" style={{ fontSize: '22px' }} /> */}
             </div>
             <div>
