@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import Countdown from './Countdown';
 import { makeOutGoing } from '../services/WebSocketService'
 import { Button } from 'antd';
-import { start, setSrcObject, setSrcObjectRemote } from '../services/CallService'
+import { start, setSrcObjectRemote } from '../services/CallService'
 
 function CallPaneCaller(props) {
 
@@ -21,14 +21,15 @@ function CallPaneCaller(props) {
     if (!view) {
       return (
         <>
-          {/* <video autoPlay muted style={{ width: '40%' }} ref={localVideo => setSrcObject(localVideo)} /> */}
-          
+        {/* LOCAL VIDEO */}
+          {/* <video autoPlay muted style={{ width: '40%' }} ref={localVideo => setSrcObject(localVideo)} /> */};
           <Button onClick={handleOnClick} size="large">Start Call</Button>
         </>
       );
     } else {
       return (
         <>
+        {/* REMOTE VIDEO */}
         <video autoPlay style={{ width: '100%' }} ref={remoteVideo} />
         <Countdown timeData={props} />
         </>
@@ -36,20 +37,7 @@ function CallPaneCaller(props) {
     }
   }
 
-//   return (
-//     <>
-//       <div>
-//       Ready?!
-//       </div>
-//       {/* <video autoPlay muted style={{ width: '100%', height: '200px' }} ref={localVideo => setSrcObject(localVideo)} /> */}
-//       <div className="button">
-//       <Button onClick={handleOnClick} size="large">Start Call</Button>
-//       </div>
-//       <video autoPlay style={{ width: '100%' }} ref={remoteVideo} />
-//       <Countdown timeData={props} />
-//     </>
-//   )
-// }
+
 
 export default CallPaneCaller;
 

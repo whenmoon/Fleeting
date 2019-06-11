@@ -4,7 +4,6 @@ var remoteStream;
 var peerConnection;
 var uuid;
 var serverConnection;
-console.log('hi')
 var peerConnectionConfig = {
   'iceServers': [
     { 'urls': 'stun:stun.stunprotocol.org:3478' },
@@ -109,7 +108,6 @@ function errorHandler(error) {
   console.error(error);
 }
 // Taken from http://stackoverflow.com/a/105074/515584
-// Strictly speaking, it's not a real UUID, but it gets the job done here
 function createUUID() {
   function s4() {
     return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);

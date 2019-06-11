@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 
 function Countdown(props) {
   console.log(props)
