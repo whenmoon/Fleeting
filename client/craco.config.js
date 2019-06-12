@@ -7,15 +7,18 @@ module.exports = {
       options: {
         lessLoaderOptions: {
           modifyVars: {
-            // "@normal-color": "#d9d9d9",
-            "@primary-color": "#00FFFFFF",
+            // "@primary-color": "#00FFFFFF",
+            "@border-color-base": "#fff",
             "@link-color": "#1DA57A",
             "@border-radius-base": "3px",
-            "@btn-primary-color": "#fff",
-"@btn-primary-bg": "#0CF574",
-"@btn-default-color": "#2F97C1",
-"@btn-default-bg": "rgba(201, 201, 189, 0.311)",
-"@btn-default-border": "#2F97C1",
+            // "@btn-primary-color": "#fff",
+            // "@btn-primary-bg": "#0CF574",
+            // "@btn-default-color": "rgba(117, 117, 116)",
+            "@btn-default-color": "rgb(68, 142, 248)",
+            "@btn-default-bg": "#fff",
+            "@btn-default-border": "rgb(68, 142, 248)",
+            // "@btn-default-border": "#8AC926",
+            // "@input-border-color":  "#fff",
           },
           javascriptEnabled: true
         }

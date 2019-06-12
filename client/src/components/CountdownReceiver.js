@@ -22,11 +22,19 @@ function Countdown(props) {
     if (time === 0) props.callExpired(true)
   }
 
+  if (time > 5000) {
     return (
-      <div>
+      <div className="time">
         {new Date(time).toISOString().slice(11, -5)}
       </div>
     )
-}
+    } else {
+      return (
+        <div className="timeShort">
+        {new Date(time).toISOString().slice(11, -5)}
+      </div>
+      )
+    }
+  }
 
 export default Countdown;

@@ -3,6 +3,7 @@ import Countdown from './Countdown';
 import { makeOutGoing } from '../services/WebSocketService'
 import { Button } from 'antd';
 import { start, setSrcObjectRemote } from '../services/CallService'
+import './CallPaneCaller.less'
 
 function CallPaneCaller(props) {
 
@@ -22,12 +23,14 @@ function CallPaneCaller(props) {
     return (
       <>
         <div className="ready">
-          <div>
-            Ready?!
+          <div className="text">
+          <div className="prompt">
+            Ready?
         {/* LOCAL VIDEO */}
             {/* <video autoPlay muted style={{ width: '40%' }} ref={localVideo => setSrcObject(localVideo)} /> */}
-            <Button onClick={handleOnClick} size="large">Start Call</Button>
           </div>
+          </div>
+            <Button onClick={handleOnClick} size="large">Start Call</Button>
         </div>
       </>
     );

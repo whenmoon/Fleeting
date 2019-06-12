@@ -18,7 +18,7 @@ function DB() {
 
   const userData = [
     {
-      contact: 'Mike',
+      contact: 'Kieran',
       avatar: maleAvatar,
       lastCallLength: 'Last call - 00:20'
     },
@@ -52,43 +52,27 @@ function DB() {
       avatar: femaleAvatar,
       lastCallLength: 'Last call - 02:30'
     },
-    // {
-    //   contact: 'James',
-    //   avatar: maleAvatar,
-    //   lastCallLength: 'Last call - 04:00'
-    // },
-    // {
-    //   contact: 'Dad',
-    //   avatar: maleAvatar,
-    //   lastCallLength: 'Last call - 60:00'
-    // }
   ]
 
   return (
     <FadeIn>
-      {/* <svg height="5" width="300" className="line2">
-              <g fill="none">
-                <path stroke="#c3ccdb" d="M1 2 l350 0" />
-              </g>
-            </svg> */}
       <div>
         {userData.map(contact =>
           <div>
             <div className="DB">
               <div className="line">
-                <img src={contact.avatar} alt="Avatar" style={{ width: 50, height: 50, borderRadius: 20 }} />
+                <img src={contact.avatar} alt="Avatar" style={{ width: 50, height: 50, borderRadius: 50 }} />
               </div>
               <span className="name">{contact.contact}</span >
               <span className="calldata">{contact.lastCallLength}</span>
-              <Icon onClick={handleOnClick} type="phone"  className="phone" style={{ fontSize: '22px' }} />
-              <Icon type="star"  className="star" style={{ fontSize: '22px' }} />
-              {/* <Icon type="delete" theme="twoTone" className="delete" style={{ fontSize: '22px' }} /> */}
+              <Icon onClick={handleOnClick} type="phone"  className="phone" style={{ fontSize: '22px', color: 'rgba(87, 141, 241)' }} />
+              <Icon type="star"  className="star" style={{ fontSize: '22px', color: 'rgba(87, 141, 241)' }} />
             </div>
             <div>
             </div>
             <svg height="5" width="420" className="line2">
               <g fill="none">
-                <path stroke="#c3ccdb" d="M1 2 l350 0" />
+                <path stroke="#c3ccdb" d="M1 2 l350 0"/>
               </g>
             </svg>
           </div>
@@ -97,7 +81,6 @@ function DB() {
     </FadeIn>
   );
 }
-
 
 
 
