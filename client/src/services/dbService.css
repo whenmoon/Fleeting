@@ -9,32 +9,7 @@
 
 .name {
 margin-right: 20px;
-/* align-self: flex-start */
 color: rgba(87, 141, 241)
 }
 
-.calldata {
-  /* align-self: flex-end */
-  /* color: rgba(87, 141, 241); */
-}
-
-.phone {
-  
-}
-
-.star {
-  
-}
-
-.delete {
-
-}
-
-.line2 {
-
-}
-
-.line {
-/* display: flex; */
-}
 
