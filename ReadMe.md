@@ -79,7 +79,7 @@ To clone and run locally:
 
 `npm start`
 
-Run two instances of the client react app using the promoted ports in Chrome and open dev tools for both. Once the development server is running, choose any contact to call by clicking on the phone icon. Choose the length of call click 'start call' and except the incoming call on the second client.
+Run two instances of the react app using the prompted ports in Chrome and open dev tools for both. Once the development server is running, choose any contact to call by clicking on the phone icon. Choose the length of call click 'start call' and accept the incoming call on the second client.
 
 ## TechStack
 
