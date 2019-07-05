@@ -45,6 +45,13 @@ Fleeting makes it possible to have focused, efficient meetings via time-limited 
 
 * Calls with parents and other elderly relatives :D
 
+## Screenshots
+
+<img src="https://i.ibb.co/qrSqTkX/Screenshot-1.png" alt="Screenshot-1" border="0">
+<img src="https://i.ibb.co/3cpSVZK/Screenshot-2.png" alt="Screenshot-2" border="0">
+<img src="https://i.ibb.co/V9K8NC8/Screenshot-3.png" alt="Screenshot-3" border="0">
+<img src="https://i.ibb.co/yXGMzkX/Screenshot-4.png" alt="Screenshot-4" border="0">
+
 
 ## Getting Started
 
