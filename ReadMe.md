@@ -1,6 +1,7 @@
 # Fleeting
 
 <p align="center" >
+  ![logo](https://i.ibb.co/2ZXWb67/logo.png =24x48)
 <img src="https://i.ibb.co/2ZXWb67/logo.png" width="644" height="828" alt="logo">
 </p>
 
@@ -47,7 +48,6 @@ Fleeting makes it possible to have focused, efficient meetings via time-limited 
 
 ## Screenshots
 
-![screenshot 1](/https://i.ibb.co/qrSqTkX/Screenshot-1.png){:height="20%" width="20%"}
 <img src="https://i.ibb.co/qrSqTkX/Screenshot-1.png" alt="Screenshot-1">
 <img src="https://i.ibb.co/3cpSVZK/Screenshot-2.png" alt="Screenshot-2">
 <img src="https://i.ibb.co/V9K8NC8/Screenshot-3.png" alt="Screenshot-3">
