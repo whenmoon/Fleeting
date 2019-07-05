@@ -1,6 +1,6 @@
 # Fleeting
 
-![fleeting logo](/https://ibb.co/FHGmPWb)
+![fleeting logo](/https://i.ibb.co/2ZXWb67/logo.png)
 
 *Fleeting: Adjective. Lasting for a very short time.*
 
