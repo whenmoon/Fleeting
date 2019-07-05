@@ -47,10 +47,11 @@ Fleeting makes it possible to have focused, efficient meetings via time-limited 
 
 ## Screenshots
 
-<img src="https://i.ibb.co/qrSqTkX/Screenshot-1.png" alt="Screenshot-1" border="0">
-<img src="https://i.ibb.co/3cpSVZK/Screenshot-2.png" alt="Screenshot-2" border="0">
-<img src="https://i.ibb.co/V9K8NC8/Screenshot-3.png" alt="Screenshot-3" border="0">
-<img src="https://i.ibb.co/yXGMzkX/Screenshot-4.png" alt="Screenshot-4" border="0">
+![screenshot 1](/https://i.ibb.co/qrSqTkX/Screenshot-1.png){:height="20%" width="20%"}
+<img src="https://i.ibb.co/qrSqTkX/Screenshot-1.png" alt="Screenshot-1">
+<img src="https://i.ibb.co/3cpSVZK/Screenshot-2.png" alt="Screenshot-2">
+<img src="https://i.ibb.co/V9K8NC8/Screenshot-3.png" alt="Screenshot-3">
+<img src="https://i.ibb.co/yXGMzkX/Screenshot-4.png" alt="Screenshot-4">
 
 
 ## Getting Started
@@ -63,7 +64,7 @@ https://awesome-mcnulty-62c21e.netlify.com/
 
 To clone and run locally:
 
-`git clone https://github.com/whenmoon/Fleeting.git'
+`git clone https://github.com/whenmoon/Fleeting.git`
 
 `cd call-server`
 
