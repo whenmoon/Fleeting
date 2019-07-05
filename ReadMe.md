@@ -1,6 +1,6 @@
 # Fleeting
 
-* Fleeting: Adjective. Lasting for a very short time. *
+*Fleeting: Adjective. Lasting for a very short time.*
 
 The quality of communication in society is degrading because people lack the attention span required for deep connections. People increasingly favour text-based instant messaging over phone calls, and despite video call technology existing for almost two decades, its use is still not widespread. Yet text-based chat lacks many important aspects of communication, such as tone and body language.
 
