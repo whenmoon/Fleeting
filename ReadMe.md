@@ -46,24 +46,24 @@ https://awesome-mcnulty-62c21e.netlify.com/
 
 To clone and run locally:
 
-`<git clone https://github.com/whenmoon/Fleeting.git>'
+`git clone https://github.com/whenmoon/Fleeting.git'
 
-`<cd call-server>`
+`cd call-server`
 
-`<npm install>`
+`npm install`
 
-`<node index.js>`
+`node index.js`
 
-`<cd ../socket-server>`
+`cd ../socket-server`
 
-`<npm install>`
+`npm install`
 
-`<node index.js>`
+`node index.js`
 
-`<cd ../client>` 
+`cd ../client` 
 
-`<npm install>`
+`npm install`
 
-`<npm start>`
+`npm start`
 
 Run two instances of the client react app using the promoted ports in Chrome and open dev tools for both. Once the development server is running, choose any contact to call by clicking on the phone icon. Choose the length of call click 'start call' and except the incoming call on the second client.
