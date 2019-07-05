@@ -83,11 +83,11 @@ Run two instances of the client react app using the promoted ports in Chrome and
 
 ## TechStack
 
-[ReactJS](https://reactjs.org/)
-[Web RTC] (https://webrtc.org/)
-[Socket.io] (https://socket.io/)
-[Node JS] (https://nodejs.org/en/)
-[Express] (https://expressjs.com/)
-[Ant Design] (https://ant.design/)
-[Heroku] (https://www.heroku.com/)
-[Netlify] (https://www.netlify.com/)
+* [ReactJS](https://reactjs.org/)
+* [Web RTC] (https://webrtc.org/)
+* [Socket.io] (https://socket.io/)
+* [Node JS] (https://nodejs.org/en/)
+* [Express] (https://expressjs.com/)
+* [Ant Design] (https://ant.design/)
+* [Heroku] (https://www.heroku.com/)
+* [Netlify] (https://www.netlify.com/)
