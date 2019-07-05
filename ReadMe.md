@@ -1,7 +1,7 @@
 # Fleeting
 
 <p align="center" >
-<a href="https://ibb.co/FHGmPWb"><img src="https://i.ibb.co/2ZXWb67/logo.png" alt="logo" border="0" width="644" height="828"></a><br /><a target='_blank' href='https://es.imgbb.com/'>photo upload</a><br />
+<a href="https://ibb.co/FHGmPWb"><img src="https://i.ibb.co/2ZXWb67/logo.png" alt="logo" border="0" width="644px" height="828px"></a>
 </p>
 
 *Fleeting: Adjective. Lasting for a very short time.*
