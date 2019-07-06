@@ -2,7 +2,7 @@ import React from 'react';
 import './Home.less';
 import { useState } from 'react';
 import CreateContact from '../components/CreateContact';
-import DB from '../services/dbService';
+import Contacts from '../components/Contacts';
 import InputTime from '../components/InputTime';
 import CallPaneReceiver from '../components/CallPaneReceiver';
 import { listenForIncomingCall } from '../services/WebSocketService'
@@ -42,7 +42,6 @@ function Home() {
   }
 
   if (callExpired) {
-    console.log('yo')
     return (
       <div>
         <CallExpired />
@@ -51,9 +50,7 @@ function Home() {
   } else if (incomingCall && incomingTimeData) {
     return (
       <div>
-        <CallerContext.Provider >
-          <CallPaneReceiver value={{ incomingTimeData, callHasExpired }} />
-        </CallerContext.Provider>
+        <CallPaneReceiver value={{ incomingTimeData, callHasExpired }} />
       </div>
     )
   } else if (goToTimeInput && selectContact) {
@@ -69,15 +66,15 @@ function Home() {
       <div>
         <RenderContext.Provider value={{ selectContactToCall, addAContact }}>
           <div className="addContactButton">
-          <div className="contacts">
-            Contacts
+            <div className="contacts">
+              Contacts
           </div>
           </div>
           <br />
-          <DB />
+          <Contacts />
           <br />
           <div className="contactsButton">
-          <AddToContacts />
+            <AddToContacts />
           </div>
         </RenderContext.Provider>
       </div>

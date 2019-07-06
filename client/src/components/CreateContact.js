@@ -21,26 +21,21 @@ function CreateContact() {
     setGoBack(true);
   }
 
-    if (!goBack) {
-      return (
-        <div className="CreateContact">
-  
-          Create Contact Component
-    
+  if (!goBack) {
+    return (
+      <div className="CreateContact">
         <form onSubmit={handleOnSubmitContact}>
-            <p>Contact</p>
-            <input type="text" onChange={handleOnChangeContact} value={formInput}></input>
-            <input type="submit" value="Add"></input>
-          </form>
-  
-          <button onClick={handleOnSubmitGoBack}>Done</button>
-  
-        </div>
-      );
-    } else {
-      return (
-        <App/>
-      )
-    }
+          <p>Contact</p>
+          <input type="text" onChange={handleOnChangeContact} value={formInput}></input>
+          <input type="submit" value="Add"></input>
+        </form>
+        <button onClick={handleOnSubmitGoBack}>Done</button>
+      </div>
+    );
+  } else {
+    return (
+      <App />
+    )
+  }
 }
-  export default CreateContact;
+export default CreateContact;

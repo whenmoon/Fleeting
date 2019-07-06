@@ -1,5 +1,5 @@
 import React from 'react';
-import './dbService.css';
+import './Contacts.css';
 import { useContext } from 'react'
 import { RenderContext } from '../containers/Home';
 import FadeIn from 'react-fade-in';
@@ -7,7 +7,7 @@ import { Icon } from 'antd';
 import maleAvatar from '../assets/img_avatar.png'
 import femaleAvatar from '../assets/img_avatar2.png'
 
-function DB() {
+function Contacts() {
 
   const { selectContactToCall } = useContext(RenderContext)
 
@@ -65,14 +65,14 @@ function DB() {
               </div>
               <span className="name">{contact.contact}</span >
               <span className="calldata">{contact.lastCallLength}</span>
-              <Icon onClick={handleOnClick} type="phone"  className="phone" style={{ fontSize: '22px', color: 'rgba(87, 141, 241)' }} />
-              <Icon type="star"  className="star" style={{ fontSize: '22px', color: 'rgba(87, 141, 241)' }} />
+              <Icon onClick={handleOnClick} type="phone" className="phone" style={{ fontSize: '22px', color: 'rgba(87, 141, 241)' }} />
+              <Icon type="star" className="star" style={{ fontSize: '22px', color: 'rgba(87, 141, 241)' }} />
             </div>
             <div>
             </div>
             <svg height="5" width="420" className="line2">
               <g fill="none">
-                <path stroke="#c3ccdb" d="M1 2 l350 0"/>
+                <path stroke="#c3ccdb" d="M1 2 l350 0" />
               </g>
             </svg>
           </div>
@@ -82,6 +82,4 @@ function DB() {
   );
 }
 
-
-
-export default DB;
+export default Contacts;
