@@ -43,10 +43,7 @@ Fleeting makes it possible to have focused, efficient meetings via time-limited 
 ## Screenshots
 
 <p align="center" display="inline-block">
-  <img src="https://i.ibb.co/3cpSVZK/Screenshot-2.png" alt="Screenshot-2" width="200">
-  <img src="https://i.ibb.co/qrSqTkX/Screenshot-1.png" alt="Screenshot-1" width="200">
-  <img src="https://i.ibb.co/V9K8NC8/Screenshot-3.png" alt="Screenshot-3" width="200">
-  <img src="https://i.ibb.co/yXGMzkX/Screenshot-4.png" alt="Screenshot-4" width="200">
+  <img src="https://i.ibb.co/fvz9hQJ/fleeting.png" alt="fleeting" border="0" width="100%">
 </p>
 
 
