@@ -9,8 +9,6 @@ function CallPaneCaller(props) {
 
   const [view, setView] = useState(false);
 
-  console.log("SENDER")
-
   const remoteVideo = useRef(null);
 
   const handleOnClick = () => {
@@ -24,13 +22,13 @@ function CallPaneCaller(props) {
       <>
         <div className="ready">
           <div className="text">
-          <div className="prompt">
-            Ready?
+            <div className="prompt">
+              Ready?
         {/* LOCAL VIDEO */}
-            {/* <video autoPlay muted style={{ width: '40%' }} ref={localVideo => setSrcObject(localVideo)} /> */}
+              {/* <video autoPlay muted style={{ width: '40%' }} ref={localVideo => setSrcObject(localVideo)} /> */}
+            </div>
           </div>
-          </div>
-            <Button onClick={handleOnClick} size="large">Start Call</Button>
+          <Button onClick={handleOnClick} size="large">Start Call</Button>
         </div>
       </>
     );

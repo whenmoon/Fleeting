@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from 'antd';
 import { useState } from 'react';
 import Home from '../containers/Home'
-import './CallExpired.less' 
+import './CallExpired.less'
 
 function CallExpired() {
 
@@ -10,19 +10,17 @@ function CallExpired() {
 
   if (home) {
     return (
-      <div>
-        <Home />
-      </div>
+      <Home />
     )
   } else {
     return (
       <div className="expired">
         <div className="options">
           <div className="prompt">
-        Call Expired!
+            Call Expired!
           </div>
-      <Button onClick={() => setHome(true)} size="large">Home</Button>
-      <Button size="large">Share</Button>
+          <Button onClick={() => setHome(true)} size="large">Home</Button>
+          <Button size="large">Share</Button>
         </div>
       </div>
     )

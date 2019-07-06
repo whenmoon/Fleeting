@@ -14,5 +14,5 @@ export const listenForIncomingCall = (toggleFlag) => {
 }
 
 export const makeOutGoing = (data) => {
-socket.emit('outgoing call', data);
+  socket.emit('outgoing call', data);
 }

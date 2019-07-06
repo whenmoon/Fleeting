@@ -14,7 +14,6 @@ function Countdown(props) {
   const [time, setTime] = useState(startingTime)
 
   useEffect(() => {
-
     setInterval(() => {
       setTime(time => time - interval);
     }, interval);
@@ -28,16 +27,16 @@ function Countdown(props) {
   }
 
   if (time > 5000) {
-  return (
-    <div className="time">
-      {new Date(time).toISOString().slice(11, -5)}
-    </div>
-  )
+    return (
+      <div className="time">
+        {new Date(time).toISOString().slice(11, -5)}
+      </div>
+    )
   } else {
     return (
       <div className="timeShort">
-      {new Date(time).toISOString().slice(11, -5)}
-    </div>
+        {new Date(time).toISOString().slice(11, -5)}
+      </div>
     )
   }
 }

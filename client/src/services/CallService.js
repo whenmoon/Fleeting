@@ -19,7 +19,7 @@ uuid = createUUID();
 serverConnection = new WebSocket(CALL_SERVER_BASE_URL);
 serverConnection.onmessage = gotMessageFromServer;
 
-serverConnection.onerror = function(event) {
+serverConnection.onerror = function (event) {
   console.error("WebSocket error observed:", event);
 };
 
@@ -42,36 +42,28 @@ export function setSrcObject(localVideo) {
   localVideo.srcObject = localStream;
 }
 
-// ===================================================================
-
-//  CALL ONCLICK
 export function start(isCaller, cb) {
-  console.log('start');
-    peerConnection = new RTCPeerConnection(peerConnectionConfig);
-    peerConnection.onicecandidate = gotIceCandidate;
-    peerConnection.ontrack = (event) => {
-      gotRemoteStream(event);
-      if(typeof cb === 'function') cb();
-    }
-    peerConnection.addStream(localStream);
-    if (isCaller) {
-      peerConnection.createOffer().then(createdDescription).catch(errorHandler);
-    }
+  peerConnection = new RTCPeerConnection(peerConnectionConfig);
+  peerConnection.onicecandidate = gotIceCandidate;
+  peerConnection.ontrack = (event) => {
+    gotRemoteStream(event);
+    if (typeof cb === 'function') cb();
+  }
+  peerConnection.addStream(localStream);
+  if (isCaller) {
+    peerConnection.createOffer().then(createdDescription).catch(errorHandler);
+  }
 }
-
-// ===================================================================
 
 function gotMessageFromServer(message) {
   if (!peerConnection) start(false);
 
   var signal = JSON.parse(message.data);
 
-  // Ignore messages from ourself
   if (signal.uuid === uuid) return;
 
   if (signal.sdp) {
     peerConnection.setRemoteDescription(new RTCSessionDescription(signal.sdp)).then(function () {
-      // Only create answers in response to offers
       if (signal.sdp.type === 'offer') {
         peerConnection.createAnswer().then(createdDescription).catch(errorHandler);
       }
@@ -83,13 +75,11 @@ function gotMessageFromServer(message) {
 
 function gotIceCandidate(event) {
   if (event.candidate != null) {
-    console.log('sending')
     serverConnection.send(JSON.stringify({ 'ice': event.candidate, 'uuid': uuid }));
   }
 }
 
 function createdDescription(description) {
-  console.log('got description');
   peerConnection.setLocalDescription(description).then(function () {
     serverConnection.send(JSON.stringify({ 'sdp': peerConnection.localDescription, 'uuid': uuid }));
   }).catch(errorHandler);
@@ -97,20 +87,17 @@ function createdDescription(description) {
 
 
 function gotRemoteStream(event) {
-  console.log('got remote stream');
   remoteStream = event.streams[0];
 }
-console.log(remoteStream)
 
 export function setSrcObjectRemote(remoteVideo) {
-  console.log('set src object')
   remoteVideo.srcObject = remoteStream;
 }
 
 function errorHandler(error) {
   console.error(error);
 }
-// Taken from http://stackoverflow.com/a/105074/515584
+
 function createUUID() {
   function s4() {
     return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
