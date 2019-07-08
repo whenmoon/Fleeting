@@ -56,29 +56,37 @@ https://awesome-mcnulty-62c21e.netlify.com/
 
 To clone and run locally:
 
-`git clone https://github.com/whenmoon/Fleeting.git`
+Back-end:
 
-`cd call-server`
+`git clone https://github.com/whenmoon/Fleeting.git
 
-`npm install`
+cd call-server
 
-`node index.js`
+npm install
 
-`cd ../socket-server`
+node index.js
 
-`npm install`
+/socket-server
 
-`node index.js`
+npm install
 
-`cd ../client` 
+node index.js`
 
-`npm install`
+Front-end:
 
-`npm start`
+`/client
+
+npm install
+
+npm start`
 
 Run two instances of the react app using the prompted ports in Chrome and open dev tools for both. Once the development server is running, choose any contact to call by clicking on the phone icon. Choose the length of call click 'start call' and accept the incoming call on the second client.
 
 ## TechStack
+
+The two servers separate concerns - `call server` allows Web RTC session instantiation via bare node and web sockets and is based on Shane Tully's Web RTC example [here](https://github.com/shanet/WebRTC-Example).
+
+`Socket server` handles realtime client notifications for incoming calls.
 
 * [ReactJS](https://reactjs.org/)
 * [Web RTC](https://webrtc.org/)
@@ -88,3 +96,5 @@ Run two instances of the react app using the prompted ports in Chrome and open d
 * [Ant Design](https://ant.design/)
 * [Heroku](https://www.heroku.com/)
 * [Netlify](https://www.netlify.com/)
+
+This project has been updated by [Jozef Kysel](https://github.com/JozefKysel) and [Leander Rysanek](https://github.com/leandroviajando). New features include integrating react-router-dom for navigation, refactoring the two servers in to one, building user management with Google 0Auth and MongoDB and writing tests with Enzyme and Jest. 
