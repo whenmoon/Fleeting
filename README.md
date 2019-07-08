@@ -58,7 +58,8 @@ To clone and run locally:
 
 Back-end:
 
-`git clone https://github.com/whenmoon/Fleeting.git
+```
+git clone https://github.com/whenmoon/Fleeting.git
 
 cd call-server
 
@@ -70,16 +71,18 @@ node index.js
 
 npm install
 
-node index.js`
+node index.js
+```
 
 Front-end:
 
-`/client
+```
+/client
 
 npm install
 
-npm start`
-
+npm start
+```
 Run two instances of the react app using the prompted ports in Chrome and open dev tools for both. Once the development server is running, choose any contact to call by clicking on the phone icon. Choose the length of call click 'start call' and accept the incoming call on the second client.
 
 ## TechStack
